@@ -92,3 +92,45 @@ Totals: 8 root files · 4 tool-specific files · 18 src/ artifacts · 3 data fil
 
 △ **Missing:**
 - Strictly provide all folder and file directory so no missing
+
+
+# AI Prompts — GitHub
+
+## Prompt 2: 
+
+**PROMPT SENT:**
+"add below git remote repo 
+https://github.com/ambikeshmishra-hub/e-commerce-databricks-medalian-pipeline.git and push the project to main repo"
+**AI RESPONSE SUMMARY:**
+"Completed
+Initial commit on main — 48 files, commit 0f8a542:
+
+Initialize medallion pipeline project structure.
+
+Remote added:
+
+origin → https://github.com/ambikeshmishra-hub/e-commerce-databricks-medalian-pipeline.git
+Push blocked (authentication)
+The push did not complete from this environment — GitHub needs credentials that aren’t available here (HTTPS prompted for username; SSH returned Permission denied (publickey)).
+
+Finish the push locally"
+**My Action with Cursor:**
+"Run below commands 
+    1. -v && git branch -a && git log --oneline -3 2>/dev/null || echo "No commits yet"
+    2. cd /Users/ambikeshmishra/databricks-medallion-pipeline && git add -A && git commit -m && git remote add origin https://github.com/ambikeshmishra-hub/e-commerce-databricks-medalian-pipeline.git && git push -u origin main
+    3. cd /Users/ambikeshmishra/databricks-medallion-pipeline && git remote add origin https://github.com/ambikeshmishra-hub/e-commerce-databricks-medalian-pipeline.git 2>/dev/null || git remote set-url origin https://github.com/ambikeshmishra-hub/e-commerce-databricks-medalian-pipeline.git && git remote -v && git push -u origin main
+    4. which gh && gh auth status 2>&1; git config --get credential.helper 2>/dev/null; ls -la ~/.ssh/*.pub 2>/dev/null | head -5
+    5. cd /Users/ambikeshmishra/databricks-medallion-pipeline && git remote set-url origin git@github.com:ambikeshmishra-hub/e-commerce-databricks-medalian-pipeline.git && git push -u origin main
+    6. mkdir -p ~/.ssh && ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts 2>/dev/null && cd /Users/ambikeshmishra/databricks-medallion-pipeline && git push -u origin main
+    7. env | grep -iE 'github|git_' 2>/dev/null; git config --list 2>/dev/null | grep -iE 'user|credential|github' | head -10
+    8. cd /Users/ambikeshmishra/databricks-medallion-pipeline && git remote set-url origin https://github.com/ambikeshmishra-hub/e-commerce-databricks-medalian-pipeline.git && git remote -v && git status && git log --oneline -1 
+    " 
+**YOUR EVALUATION:**
+✓ **What was good:**
+- Staged & commited the changes
+- Tracked all modified files
+△ **Missing:**
+- Unable to push/autheticate due to otp validation
+
+**My Manual Action:**
+- Athenticated manually and pushed the code
