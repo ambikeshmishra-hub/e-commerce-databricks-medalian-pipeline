@@ -1,0 +1,20 @@
+{
+  "run_name": "silver_03_quality_type_validation",
+  "tasks": [
+    {
+      "task_key": "quality_type_validation",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/silver/03_quality_type_validation"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

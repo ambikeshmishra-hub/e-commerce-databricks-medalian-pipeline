@@ -1,0 +1,20 @@
+{
+  "run_name": "silver_04_quality_referential_integrity",
+  "tasks": [
+    {
+      "task_key": "quality_referential_integrity",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/silver/04_quality_referential_integrity"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

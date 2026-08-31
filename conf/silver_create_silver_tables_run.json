@@ -1,0 +1,20 @@
+{
+  "run_name": "silver_create_silver_tables",
+  "tasks": [
+    {
+      "task_key": "create_silver_tables",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/silver/create_silver_tables"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

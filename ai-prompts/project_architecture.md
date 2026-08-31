@@ -134,3 +134,27 @@ Finish the push locally"
 
 **My Manual Action:**
 - Athenticated manually and pushed the code
+
+
+
+
+## Prompt 3: 
+
+**PROMPT SENT:**
+install pip install databricks-cli faker pandas numpy and setup databricks using tokes as 'dapif7dd770a78d503340bf2a2171814d8a2' and url is https://dbc-8af8048c-3b55.cloud.databricks.com/  and setup it accordingly that we need to execute it on databricks community edition
+
+**AI RESPONSE SUMMARY:**
+
+105 x 16
+install pip install databricks-cli faker pandas numpy and setup databricks using tokes as 'dapif7dd770a78d503340bf2a2171814d8a2' and url is 
+dbc-8af8048c-3b55.cloud.databricks.com
+  and setup it accordingly that we need to execute it on databricks community edition
+
+Agent
+
+  Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting tzdata (from faker>=24.0.0->-r requirements.txt (line 2))
+  Downloading tzdata-2026.3-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting python-dateutil>=2.8.2 (from pandas>=2.0.0->-r requirements.txt (line 3))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Packages installed. Configuring Databricks CLI and verifying the connection.

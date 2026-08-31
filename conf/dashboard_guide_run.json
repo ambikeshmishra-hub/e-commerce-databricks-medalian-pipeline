@@ -1,0 +1,20 @@
+{
+  "run_name": "dashboard_guide_validation",
+  "tasks": [
+    {
+      "task_key": "dashboard_guide",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/dashboard/dashboard_guide"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "run_name": "gold_03_daily_weekly_trends",
+  "tasks": [
+    {
+      "task_key": "daily_weekly_trends",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/gold/03_daily_weekly_trends"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

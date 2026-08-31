@@ -1,0 +1,20 @@
+{
+  "run_name": "bronze_ingest_products",
+  "tasks": [
+    {
+      "task_key": "ingest_products",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/bronze/03_ingest_products"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "run_name": "silver_01_quality_completeness",
+  "tasks": [
+    {
+      "task_key": "quality_completeness",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/silver/01_quality_completeness"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# Copy to ~/.databrickscfg and replace placeholders. Never commit real tokens.
+#
+# Generate token: Databricks UI → Settings → Developer → Access tokens
+# Community Edition workspace: https://dbc-8af8048c-3b55.cloud.databricks.com/
+
+[DEFAULT]
+host = https://YOUR-WORKSPACE.cloud.databricks.com
+token = dapiYOUR_TOKEN_HERE
+
+[community]
+host = https://dbc-8af8048c-3b55.cloud.databricks.com
+token = dapiYOUR_TOKEN_HERE

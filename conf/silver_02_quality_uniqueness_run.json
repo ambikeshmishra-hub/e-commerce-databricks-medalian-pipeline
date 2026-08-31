@@ -1,0 +1,20 @@
+{
+  "run_name": "silver_02_quality_uniqueness",
+  "tasks": [
+    {
+      "task_key": "quality_uniqueness",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/silver/02_quality_uniqueness"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

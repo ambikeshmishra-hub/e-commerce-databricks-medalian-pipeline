@@ -1,0 +1,20 @@
+{
+  "run_name": "gold_02_revenue_by_customer",
+  "tasks": [
+    {
+      "task_key": "revenue_by_customer",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/gold/02_revenue_by_customer"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

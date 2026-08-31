@@ -1,0 +1,20 @@
+{
+  "run_name": "gold_04_customer_segmentation",
+  "tasks": [
+    {
+      "task_key": "customer_segmentation",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/gold/04_customer_segmentation"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+# Databricks Medallion Pipeline Engineering Rules
+
+- Platform: Databricks / Delta Lake / PySpark 3.4+ / Python 3.10+
+- Architecture Rules:
+  1. Bronze Layer: Ingest raw CSV data losslessly with metadata columns (`_ingested_at`, `_source_file`).
+  2. Silver Layer: Perform Data Quality validations using soft-quarantine (flag bad rows using `quality_check_result` ['PASS'/'FAIL'] and an array column `dq_errors` [ARRAY<STRING>]). NEVER drop bad rows silently.
+  3. Silver Joins: Always use LEFT OUTER JOINs for referential integrity checks to preserve orphan records.
+  4. Gold Layer: Source ONLY records where `quality_check_result = 'PASS'`.
+- Code Quality:
+  - NEVER use Python UDFs (`@udf`). Use native vectorized PySpark functions (`pyspark.sql.functions`).
+  - Avoid `.collect()` on large datasets.
+  - Follow PEP-8 guidelines and include explicit type hints/docstrings.
+- AI Prompt Logging:
+  - After each task, append the user's exact prompt (verbatim) to the matching file under `ai-prompts/`, using the same section format as `ai-prompts/project_architecture.md`:
+    - `## Prompt N:` → **PROMPT SENT:** → **AI RESPONSE SUMMARY:** → **YOUR EVALUATION:** (✓ good / ✗ fixes / △ missing)
+  - Topic → file mapping: data generation → `data-generation.md`, bronze → `bronze-layer.md`, silver → `silver-layer.md`, gold → `gold-layer.md`, dashboard → `dashboard.md`, debugging → `debugging.md`, docs → `documentation.md`, repo/setup/architecture → `project_architecture.md`.
+  - Do not log meta-instructions or prompt-logging rules themselves.

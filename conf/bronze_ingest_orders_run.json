@@ -1,0 +1,20 @@
+{
+  "run_name": "bronze_ingest_orders",
+  "tasks": [
+    {
+      "task_key": "ingest_orders",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/bronze/02_ingest_orders"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

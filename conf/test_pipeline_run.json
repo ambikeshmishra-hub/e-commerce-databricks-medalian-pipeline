@@ -1,0 +1,20 @@
+{
+  "run_name": "pipeline_integration_tests",
+  "tasks": [
+    {
+      "task_key": "test_pipeline",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/tests/run_pipeline_tests"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "run_name": "gold_create_gold_tables",
+  "tasks": [
+    {
+      "task_key": "create_gold_tables",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/gold/create_gold_tables"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

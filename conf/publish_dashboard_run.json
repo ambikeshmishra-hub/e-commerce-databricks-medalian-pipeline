@@ -1,0 +1,20 @@
+{
+  "run_name": "publish_dashboard",
+  "tasks": [
+    {
+      "task_key": "publish_dashboard",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/dashboard/publish_dashboard"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

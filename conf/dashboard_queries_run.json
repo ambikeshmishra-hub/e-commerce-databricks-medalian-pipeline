@@ -1,0 +1,20 @@
+{
+  "run_name": "dashboard_queries",
+  "tasks": [
+    {
+      "task_key": "dashboard_queries",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/dashboard/dashboard_queries"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

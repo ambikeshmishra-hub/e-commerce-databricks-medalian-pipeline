@@ -1,0 +1,20 @@
+{
+  "run_name": "silver_05_quality_business_logic",
+  "tasks": [
+    {
+      "task_key": "quality_business_logic",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/silver/05_quality_business_logic"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

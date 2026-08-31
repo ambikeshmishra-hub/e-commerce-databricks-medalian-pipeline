@@ -1,0 +1,20 @@
+{
+  "run_name": "test_silver_rules",
+  "tasks": [
+    {
+      "task_key": "silver_rules_tests",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/tests/run_silver_rules_tests"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

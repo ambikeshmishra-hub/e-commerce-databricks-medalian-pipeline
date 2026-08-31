@@ -1,0 +1,46 @@
+{
+  "name": "medallion-pipeline-bronze-silver-gold-dashboard",
+  "description": "End-to-end Medallion pipeline: Bronze ingest -> Silver DQ -> Gold marts -> Lakeview dashboard publish",
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "bronze",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/bronze/ingest_all"
+      },
+      "environment_key": "serverless"
+    },
+    {
+      "task_key": "silver",
+      "depends_on": [{"task_key": "bronze"}],
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/silver/create_silver_tables"
+      },
+      "environment_key": "serverless"
+    },
+    {
+      "task_key": "gold",
+      "depends_on": [{"task_key": "silver"}],
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/gold/create_gold_tables"
+      },
+      "environment_key": "serverless"
+    },
+    {
+      "task_key": "dashboard",
+      "depends_on": [{"task_key": "gold"}],
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/dashboard/publish_dashboard"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "environment": "databricks_community_edition",
+  "workspace_url": "https://dbc-8af8048c-3b55.cloud.databricks.com",
+  "profile": "community",
+  "catalog": "hive_metastore",
+  "schema_bronze": "bronze",
+  "schema_silver": "silver",
+  "schema_gold": "gold",
+  "dbfs_base_path": "dbfs:/FileStore/medallion",
+  "dbfs_data_path": "dbfs:/FileStore/medallion/data",
+  "local_data_path": "data",
+  "cluster_name": "medallion-ce-cluster",
+  "spark_version": "14.3.x-scala2.12",
+  "node_type_id": "i3.xlarge",
+  "num_workers": 0,
+  "notes": "Community Edition uses hive_metastore, DBFS, and single-node clusters (num_workers=0)."
+}

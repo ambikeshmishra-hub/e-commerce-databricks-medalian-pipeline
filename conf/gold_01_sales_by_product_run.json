@@ -1,0 +1,20 @@
+{
+  "run_name": "gold_01_sales_by_product",
+  "tasks": [
+    {
+      "task_key": "sales_by_product",
+      "notebook_task": {
+        "notebook_path": "/Shared/medallion-pipeline/gold/01_sales_by_product"
+      },
+      "environment_key": "serverless"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "serverless",
+      "spec": {
+        "environment_version": "3"
+      }
+    }
+  ]
+}
