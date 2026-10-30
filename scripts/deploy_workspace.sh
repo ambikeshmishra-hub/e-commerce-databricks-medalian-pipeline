@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Deploy medallion pipeline source code and notebooks to Databricks workspace.
 set -euo pipefail
-
 PROFILE="${DATABRICKS_PROFILE:-community}"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 WS="/Shared/medallion-pipeline"
@@ -17,7 +16,6 @@ databricks workspace mkdirs "${WS}/src/bronze" --profile "${PROFILE}" || true
 databricks workspace mkdirs "${WS}/src/silver" --profile "${PROFILE}" || true
 databricks workspace mkdirs "${WS}/src/gold" --profile "${PROFILE}" || true
 databricks workspace mkdirs "${WS}/src/dashboard" --profile "${PROFILE}" || true
-
 import_notebook() {
   local dest="$1"
   local src="$2"
